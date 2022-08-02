@@ -31,22 +31,23 @@ We are using one main CSS file (assets/css/style.css).
 
 Below are 5 additional CSS files:
 
-bootstrap.min.css - This is a main stylesheet that required for basic styling like grid, form, input and web elements.
-font-awesome.css - CSS stylesheets for font icon packs.
-owl.carousel.min.css - This stylesheet used for styling the Banner slideshow.
-slick.css - This stylesheet used for styling the Banner slideshow.
-style.css - This stylesheet used for styling the Web Layout.
-The main CSS file (assets/css/style.css) contains all of the specific stylings for the page. 
+## bootstrap.min.css - This is a main stylesheet that required for basic styling like grid, form, input and web elements.
+## font-awesome.css - CSS stylesheets for font icon packs.
+## owl.carousel.min.css - This stylesheet used for styling the Banner slideshow.
+## slick.css - This stylesheet used for styling the Banner slideshow.
+## style.css - This stylesheet used for styling the Web Layout.
+## The main CSS file (assets/css/style.css) contains all of the specific stylings for the page. 
 
 
 # Scripts
+
 This theme uses several scripts many of which are documented within the code. 
 
-> jquery.min.js
-> bootstrap.min.js
-> owl.carousel.min.js
-> slick.min.js
-> interface.js
+## jquery.min.js
+## bootstrap.min.js
+## owl.carousel.min.js
+## slick.min.js
+## interface.js
 
 
 
