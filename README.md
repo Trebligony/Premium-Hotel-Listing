@@ -16,15 +16,14 @@ The main structure of this site is wrapped in a 'container' div. Inside of that 
 
 # Main Navigation
 You can change the main site navigation with change this code:
-            <div class="main-navigation">
+  <div class="main-navigation">
             <nav>
-            <ul class="custom-flex">
-                <li class="active"><a href="#">Home</a></li>
-                ....
-                <li ><a href="#">About</a></li>
-            </ul>
+                <ul class="custom-flex">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li ><a href="#">About</a></li>
+                </ul>
             </nav>
-            </div>
+    </div>
 
 # CSS
 
