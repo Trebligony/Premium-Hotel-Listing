@@ -1904,7 +1904,9 @@ img {
 	min-width: 100%;
 }
 
-
+#simplelogo{
+	max-height: 75px;
+}
 
 
 
