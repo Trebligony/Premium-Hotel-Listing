@@ -1900,14 +1900,12 @@ img {
 	width: 100%;
 }
 
-#photo3{
-	min-width: 100%;
-}
-
 #simplelogo{
 	max-height: 75px;
 }
 
-
+#intro {
+	background-image: url('/images/3.jpg');
+}
 
 
