@@ -2,10 +2,10 @@ var map;
 var service;
 var infowindow;
 var submitBtn = document.getElementById('submit');
+var searchVal = document.getElementById('search-text');
 
 function initMap() {
-  console.log("I'm running initMap Function");
-  console.log(document.getElementById('search-value').value);
+  console.log(searchVal.value);
   var sydney = new google.maps.LatLng(-33.867, 151.195);
 
   infowindow = new google.maps.InfoWindow();
@@ -14,10 +14,9 @@ function initMap() {
     document.getElementById('map'), { center: sydney, zoom: 15 });
 
   // map = new google.maps.Map();
-
   
   var request = {
-    query: searchValue,
+    query: searchVal,
     fields: ['name', 'icon', 'geometry', 'price_level', 'rating'],
   };
 
@@ -27,7 +26,7 @@ function initMap() {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         console.log(results);
-        // createMarker(results[i]);
+        createMarker(results[i]);
       }
       map.setCenter(results[0].geometry.location);
     }
@@ -49,6 +48,8 @@ function createMarker(place) {
   });
 }
 
-submitBtn.addEventListener("click", function () {
+submitBtn.addEventListener("click", function() {
+  event.preventDefault();
   initMap();
 });
+
