@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <title>Premium Restaurant Listing</title>
+  <title>Premium Hotel - Hotel One Page Landing Page </title>
   <!--Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <!--Custome Style -->
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <!--OWL Carousel slider-->
@@ -31,14 +31,18 @@
 </head>
 
 <body>
+
   <!-- Header -->
+
   <header id="header">
+
     <!-- Navigation -->
+
     <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="400">
       <div class="container">
         <div class="navbar-header">
           <div class="logo">
-            <a href="#"><img src="./images/simplelogo.png" alt="image" id="simplelogo"/></a>
+            <a href="#"><img src="https://via.placeholder.com/252x45" alt="image" /></a>
           </div> <!-- /Logo -->
           <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse"
             class="navbar-toggle collapsed" type="button">
@@ -51,17 +55,19 @@
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="nav navbar-nav">
             <li><a href="#intro" class="js-target-scroll">Home</a></li>
-            <li><a href="#most_trusted" class="js-target-scroll">Search</a></li>
-            <li><a href="#most_popular" class="js-target-scroll">My Results</a></li>
-            <li><a href="#contect" class="js-target-scroll">My Favorites</a></li>
-            <li class="login_btn"><a href="#" data-toggle="modal" data-target="#loginform">Subscribe</a></li>
+            <li><a href="#most_popular" class="js-target-scroll">About Us</a></li>
+            <li><a href="#most_trusted" class="js-target-scroll">Hotels</a></li>
+            <li><a href="#contect" class="js-target-scroll">Contact Us</a></li>
+            <li class="login_btn"><a href="#" data-toggle="modal" data-target="#loginform">Log in or Sign up</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
     <!-- Navigation end -->
 
   </header>
+
   <!-- /Header -->
 
   <div class="social_links">
@@ -74,27 +80,23 @@
   </div>
 
   <!-- Intro -->
+
   <section id="intro" class="parallex-bg">
     <div class="owl-carousel owl-theme">
-      <div></div>
-      <div></div>
+      <div class="item" style="background-image:url(https://via.placeholder.com/1920x500)"></div>
+      <div class="item" style="background-image:url(https://via.placeholder.com/1920x500)"></div>
       <div class="item" style="background-image:url(https://via.placeholder.com/1920x500)"></div>
     </div>
     <div class="container">
       <div class="intro_text">
-        <h1>Search for Premium Restaurants Online!</h1>
+        <h1>Find the best restaurants online!</h1>
         <div class="intro_search">
-          <form>
-            <div class="form-group select">
-              
-            </div>
+          <form id="search-form">
             <div class="form-group">
-              <input type="text" id="search-text" class="form-control" placeholder="Enter a Restaurant">
+              <input id="search-keyword" type="text" class="form-control" placeholder="Enter Restaurant">
             </div>
             <div class="form-group btn_div">
-              <button id="submit" class="btn btn-block">Search
-
-              </button>
+              <input type="submit" class="btn btn-block" value="SEARCH">
             </div>
           </form>
         </div>
@@ -104,220 +106,105 @@
       </div>
     </div>
   </section>
+
   <!-- /Intro -->
 
-  <!-- background image -->
-  <!-- <div>
-    <img src="./images/3.jpg" id="photo3">
-</div> -->
   <section id="most_trusted" class="section-padding gray_bg">
     <div class="container">
-        <div class="section_heading">
-          </div>
-        <div class="restaurants_list">
-                    <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                        <li>Hotel descr, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                      <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                        <li>Hotel desc, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                      <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                        <li>Hotel desc, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                      <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                      <li>Hotel desc, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                      <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                        <li>Hotel desc, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                      <div class="restaurants_wrap">
-                        <a href="#" class="list_wrap">
-                            <div class="list_img">
-                                <img src="https://via.placeholder.com/78x78" alt="image">
-                              </div>
-                              <div class="list_info">
-                                <div class="list_title">Ahoy! This is my space</div>
-                                  <div class="list_cuisines">
-                                    <ul>
-                        <li>Hotel desc, </li>
-                                          <li>Review, </li>
-                                          <li>Pricing info, </li>
-                                          <li>Comfort level</li>
-                                      </ul>
-                                  </div>
-                                  <div class="list_affordability">
-                                 <span class="list__affordability__value">₹</span>₹₹                
-                              </div>
-                                  <div class="list_ratings">
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star active"></i>
-                                          <i class="fa fa-star"></i>
-                                          <span>(2560)</span>
-                                     </div>
-                              </div>
-                              <div class="list_delivery_time">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </div>
-                          </a>
-                      </div>
-                  </div>
-              
-              <div class="mt_40 text-center"><a href="#" class="btn btn-sm">Search</a></div>    
-      </div>
+      <div class="restaurants_list">
+
   </section>
+
   <!-- /Beginning of The About Us Section -->
 
+  <section id="most_popular" class="section-padding ">
+    <div class="container">
+      <div class="section_heading">
+        <h2>Popular This Month In The Tri-State Area</h2>
+        <p>The easiest way to your favorite hotel</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="p_entry">
+            <div class="entry_thumbnail">
+              <a href="#"><img src="https://via.placeholder.com/360x210" alt="image"></a>
+              <div class="entry_discount">40%</div>
+            </div>
+            <div class="entry_info">
+              <a href="#">
+                <h4>Hendrerit nisi </h4>
+              </a>
+              <div class="entry-summary">Mauris interdum diam lorem. Sed…</div>
+              <div class="list_affordability">
+                <span class="list__affordability__value">₹</span>₹₹
+              </div>
+              <div class="list_ratings">
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star"></i>
+                <span>(2560)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="p_entry">
+            <div class="entry_thumbnail">
+              <a href="#"><img src="https://via.placeholder.com/360x210" alt="image"></a>
+              <div class="entry_discount">40%</div>
+            </div>
+            <div class="entry_info">
+              <a href="#">
+                <h4>Hendrerit nisi </h4>
+              </a>
+              <div class="entry-summary">Mauris interdum diam lorem. Sed…</div>
+              <div class="list_affordability">
+                <span class="list__affordability__value">₹</span>₹₹
+              </div>
+              <div class="list_ratings">
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star"></i>
+                <span>(2560)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="p_entry">
+            <div class="entry_thumbnail">
+              <a href="#"><img src="https://via.placeholder.com/360x210" alt="image"></a>
+              <div class="entry_discount">40%</div>
+            </div>
+            <div class="entry_info">
+              <a href="#">
+                <h4>Hendrerit nisi </h4>
+              </a>
+              <div class="entry-summary">Mauris interdum diam lorem. Sed…</div>
+              <div class="list_affordability">
+                <span class="list__affordability__value">₹</span>₹₹
+              </div>
+              <div class="list_ratings">
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star"></i>
+                <span>(2560)</span>
+              </div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- /End of About Us Section -->
-
 
   <div id="contect" class="section-padding gray_bg">
     <div class="container">
@@ -410,16 +297,10 @@
             <h5>Popular cuisines</h5>
             <ul>
               <li><a href="#">Biryani in XXXXXXX</a></li>
-              <li><a href="#">Biryani in XXXXXXX</a></li>
-              <li><a href="#">Ice Cream in XXXXXXX</a></li>
-              <li><a href="#">Biryani in XXXXXXX</a></li>
               <li><a href="#">Vegetarian in XXXXXXX</a></li>
               <li><a href="#">Ice Cream in XXXXXXX</a></li>
               <li><a href="#">Cakes in XXXXXXX</a></li>
-              <li><a href="#">Cakes in XXXXXXX</a></li>
               <li><a href="#">Pizza in XXXXXXX</a></li>
-              <li><a href="#">Pizza in XXXXXXX</a></li>
-              <li><a href="#">Biryani in XXXXXXX</a></li>
             </ul>
           </div>
         </div>
@@ -623,12 +504,12 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/interface.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+
   <!-- Maps -->
 
   <script src="js/slick.min.js"></script>
-
-  <script src="./js/script2.js"></script>
-
+  <script src="./js/config.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
