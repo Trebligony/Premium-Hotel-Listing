@@ -525,7 +525,7 @@ table thead th, table thead td {
 }
 .intro_search .form-group {
 	float:left;
-	width:75%;
+	width:37.33%;
 	margin:0 auto;
 }
 .intro_search .form-group .btn {
@@ -1900,9 +1900,15 @@ img {
 	width: 100%;
 }
 
+#simplelogo{
+	max-height: 75px;
+}
 
+#intro {
+	background-image: url('../images/3.jpg');
+}
 
-
-
-
-
+#most_trusted {
+	display: none;
+	background-color: white;
+}
