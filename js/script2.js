@@ -8,8 +8,6 @@ submitBtn.addEventListener('click', function () {
     var keyWord = keyword.value;
     var requestUrl = googleMaps + "&keyword=" + keyWord + "&key=" + apiKey;
     var searchResultsEl = document.querySelector('.restaurants_list');
-
-    console.log(requestUrl);
  
     fetch(requestUrl)    
     .then(function (response) {        
@@ -23,16 +21,20 @@ submitBtn.addEventListener('click', function () {
             var businessVicinity = data[i].vicinity;
             var businessDetails = "Vicinity: " + businessVicinity + " -- " + "Rating: " + businessRating;
             
+            var resultsListRowEL = document.createElement('li')
             var businessNameEl = document.createElement('h3');
             var businessDetailsEl = document.createElement('p');
-            var horizontalLineEl = document.createElement('hr');
-
+            var starSpanEl = document.createElement('span');
+            
             businessNameEl.textContent = businessName;
             businessDetailsEl.textContent = businessDetails;
+            starSpanEl.classList.add("fa");
+            starSpanEl.classList.add("fa-star");
 
-            searchResultsEl.append(businessNameEl);
-            searchResultsEl.append(businessDetailsEl);
-            searchResultsEl.append(horizontalLineEl);
+            searchResultsEl.append(resultsListRowEL);
+            resultsListRowEL.append(businessNameEl);
+            resultsListRowEL.append(businessDetailsEl);
+            resultsListRowEL.append(starSpanEl);
           }        
     });
 })

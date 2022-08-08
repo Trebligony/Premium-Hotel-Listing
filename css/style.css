@@ -37,7 +37,6 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
 	color:#111111;
-	margin:0 auto 20px;
 	font-weight:300;
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -1890,7 +1889,7 @@ h2 {font-size: 32px;}
 	padding: 20px;
 }
 .mb-xl-20 {
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 }
 img {
 	width: 100%;
@@ -1902,4 +1901,19 @@ img {
 
 #intro {
 	background-image: url('../images/3.jpg');
+}
+
+.restaurants_list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.restaurants_list li {
+	border: 2px solid black;
+	display: flex;
+	padding: 2%;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
 }
