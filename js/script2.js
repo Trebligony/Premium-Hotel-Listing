@@ -2,6 +2,7 @@ var keyword = document.querySelector('#search-text');
 var submitBtn = document.querySelector('#submit');
 var googleMaps = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?&location=-33.8670522%2C151.1957362&radius=1500&type=restaurant';
 var searchResults = document.querySelector('.restaurants_list');
+var apiKey = "AIzaSyDieokqGrcuNBJXx4au9wQ6rKDCNEvGSyY";
 
 
 submitBtn.addEventListener('click', function () {
