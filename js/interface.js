@@ -1,7 +1,7 @@
 ﻿/*
-Name: Premium Hotel Landing Page.
-Author: Rutgers Bootcamp Group Three Students
-Authors: Gilbert Onyenwezi | Keith S. Thomas | Ruth Kim | Jeidi Garcia | Gabriel Guerrero
+Theme Name: FoodPunada - Restaurant One Page  Landing Page Template.
+Author: codezionsoftwares
+Author URL: https://www.templatemonster.com/vendors/Codezion
 Version: 1.0.0
 */
 
@@ -29,6 +29,7 @@ $(function(e) {
 	  if($('#navigation').removeClass('in')) {
 	  }
 	  });	
+
 /*------------------------------------------------------------------
 	Contact-form-Slider
 	-------------------------------------------------------------------*/
