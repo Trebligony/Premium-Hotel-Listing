@@ -1874,10 +1874,6 @@ h2 {font-size: 32px;}
 	text-transform: uppercase;
 }
 
-
-
-
-
 .bx-wrapper {
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
@@ -1907,12 +1903,3 @@ img {
 #intro {
 	background-image: url('../images/3.jpg');
 }
-
-<<<<<<< HEAD
-#most_trusted {
-	display: none;
-	background-color: white;
-}
-=======
-
->>>>>>> 80c3caeff31c02ccf4f36b9a1d441ea6bde77063
