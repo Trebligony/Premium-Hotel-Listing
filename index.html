@@ -1,109 +1,121 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<title>Premium Restaurants Listing</title>
-<!--Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-<!--Custome Style -->
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<!--OWL Carousel slider-->
-<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-<link href="css/slick.css" rel="stylesheet">
-<!--FontAwesome Font Style -->
-<link href="css/font-awesome.min.css" rel="stylesheet">    
-<!-- Fav and touch icons -->
-<link rel="shortcut icon" href="images/favicon.png">
-<!-- Google-Font-->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
-<!-- Google Maps-->
-<link rel="stylesheet" type="text/css" href="./css/gstyle.css" />
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Premium Restaurants Listing</title>
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <!--Custome Style -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--OWL Carousel slider-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link href="css/slick.css" rel="stylesheet">
+  <!--FontAwesome Font Style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="images/favicon.png">
+  <!-- Google-Font-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <!-- Google Maps -->
+  <!-- <link rel="stylesheet" type="text/css" href="./css/gstyle.css" /> -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->  
+<![endif]-->
 </head>
 
 <body>
-<!-- Header -->
-<header id="header">
-  <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="400">
-    <div class="container">
-      <div class="navbar-header">
-      	<div class="logo"> 
-        	<a href="#"><img src="images/logo.png" alt="image"/></a> 
-        </div> <!-- /Logo -->
-        <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> 
-            <span class="sr-only">Toggle navigation</span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-        </button>
+  <!-- Header -->
+  <header id="header">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="400">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="image" /></a>
+          </div> <!-- /Logo -->
+          <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse"
+            class="navbar-toggle collapsed" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="#intro" class="js-target-scroll">Search</a></li>
+
+            <li><a href="#most_trusted" class="js-target-scroll">My Hotels</a></li>
+
+            <li><a href="#contect" class="js-target-scroll">Contact Us</a></li>
+            <li class="login_btn"><a href="#" data-toggle="modal" data-target="#loginform">Subscribe</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="nav navbar-nav">
-          <li><a href="#intro" class="js-target-scroll">Search</a></li>
-          
-          <li><a href="#most_trusted" class="js-target-scroll">My Hotels</a></li>
-          
-          <li><a href="#contect" class="js-target-scroll">Contact Us</a></li>
-          <li class="login_btn"><a href="#" data-toggle="modal" data-target="#loginform">Subscribe</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigation end --> 
-    
+    </nav>
+    <!-- Navigation end -->
+
   </header>
-  <!-- /Header --> 
-  
+  <!-- /Header -->
+
   <div class="social_links">
     <ul>
-        <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
-        <li><a href="#" class="twitch"><i class="fa fa-twitch"></i></a></li>
-        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#" class="google_plus"><i class="fa fa-google-plus"></i></a></li>
-      </ul>
+      <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
+      <li><a href="#" class="twitch"><i class="fa fa-twitch"></i></a></li>
+      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" class="google_plus"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
   </div>
 
-<!-- Intro --> 
-<section id="intro" class="parallex-bg">
-	<div class="owl-carousel owl-theme">
-    	<div class="item" style="background-image:url(./images/banner_3.jpg)"></div>
+  <!-- Intro -->
+  <section id="intro" class="parallex-bg">
+    <div class="owl-carousel owl-theme">
+      <div class="item" style="background-image:url(./images/banner_3.jpg)"></div>
       <div class="item" style="background-image:url(./images/banner_2.jpg)"></div>
       <div class="item" style="background-image:url(./images/banner_1.jpg)"></div>
-  </div>
-	<div class="container">
-    	<div class="intro_text">
-    		<h1>Search For Restaurants online!</h1>
-      <div class="intro_search">
-                <form>
-                   
-                   
-                    <div class="form-group">
+    </div>
+    <div class="container">
+      <div class="intro_text">
+        <h1>Search For Restaurants online!</h1>
+        <div class="intro_search">
+          <div>
+
+            <div class="form-group">
+              <input id="search-text" class="form-control" type="text" placeholder="Enter a keyword">
+
+            </div>
+            <div class="form-group btn_div">
+              <button id="submit" class="btn btn-block">Search Restaurants</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- <div class="form-group">
                         <input id="search-text" class="form-control" type="text"  placeholder="Enter an city">
                         
                     </div>
                     <div class="form-group btn_div">
                       <button id="submit" class="btn btn-block">Search Restaurants</button>
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="scroll_down">
-			<a href="#most_trusted" class="js-target-scroll"><i class="fa fa-angle-down"></i></a>
-	    </div>
+            </div> -->
+      </div>
+      <div class="scroll_down">
+        <a href="#most_trusted" class="js-target-scroll"><i class="fa fa-angle-down"></i></a>
+      </div>
     </div>
-</section>
-<!-- /Intro --> 
+  </section>
+  <!-- /Intro -->
 
 
 
@@ -123,17 +135,17 @@
 
   <section id="most_trusted" class="section-padding gray_bg">
     <div class="container">
-        <div class="section_heading">
-            <h2>My Search Results </h2>
-              <p>Bon Voyage!</p>
-          </div>
-        <div class="restaurants_list">
-                      
+      <div class="section_heading">
+        <h2>My Search Results </h2>
+        <p>Bon Voyage!</p>
+      </div>
+      <div class="restaurants_list">
+
       </div>
   </section>
-  
-  
-<!-- /Beginning of The Contact Us Section -->
+
+
+  <!-- /Beginning of The Contact Us Section -->
 
   <div id="contect" class="section-padding gray_bg">
     <div class="container">
@@ -200,7 +212,7 @@
     </div>
   </div>
 
-<!-- /Beginning of The Footer Section -->
+  <!-- /Beginning of The Footer Section -->
 
   <footer id="footer">
     <div class="container">
