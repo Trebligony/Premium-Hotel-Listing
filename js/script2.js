@@ -82,7 +82,7 @@ searchResults.addEventListener("click", function (event) {
         console.log(businessName);
         console.log(businessVicinity);
         console.log(businessRating);
-        localStorage.setItem(businessName, JSON.stringify(businessVicinity, businessRating));
+        window.localStorage.setItem(businessName, JSON.stringify(businessVicinity, businessRating));
     }
 
 
