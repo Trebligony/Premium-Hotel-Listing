@@ -98,25 +98,24 @@ function writeFromLocalStorage () {
 function writeHourRows() {
     for (let i = 0; i < hours.length; i++) {
         var rowEl = $('<section>');
-        var hourDiv = $('<div>');
-        var textAreaSection = $('<textarea>');
-        var rowBtn = $('<div>');
-        var rowBtnImage = $('<img>');
+        var bisDiv = $('<div>');
+        var bisDetails = $('<textarea>');
+        var rowStar = $('<span>');
          // Use IF-Then statement to change row color
-        if (hoursInts[i] === currentTimeHr) {
-            hourRowStyle = "present";
-        } else if (Number(hoursInts[i]) > Number(curentTimeHrInt)) {
-            hourRowStyle = "future";
-        } else {
-            hourRowStyle = "past";
-        }
+        //if (hoursInts[i] === currentTimeHr) {
+          //  hourRowStyle = "present";
+        // } else if (Number(hoursInts[i]) > Number(curentTimeHrInt)) {
+        //     hourRowStyle = "future";
+        // } else {
+        //     hourRowStyle = "past";
+        // }
         // Create Row Element
-        rootEl.append(rowEl);
-        rowEl.attr('class', 'row');
+        searchResultsEl.append(rowEl);
+        //rowEl.attr('class', 'row');
         // Create Hour column
-        rowEl.append(hourDiv);
-        hourDiv.text(hours[i]);
-        hourDiv.attr('class', 'hour');
+        rowEl.append(bisDiv);
+        bisDiv.text(hours[i]);
+        //bisDiv.attr('class', 'hour');
         // Create Calendar Event Field
         rowEl.append(textAreaSection);
         textAreaSection.attr('class', hourRowStyle);
