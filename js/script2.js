@@ -3,6 +3,7 @@ var submitBtn = document.querySelector('#submit');
 var googleMaps = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?&location=-33.8670522%2C151.1957362&radius=1500&type=restaurant';
 var searchResults = document.querySelector('.list_title');
 var apiKey = "AIzaSyDieokqGrcuNBJXx4au9wQ6rKDCNEvGSyY";
+var favoritesresults = document.querySelector("#business-name");
 
 
 submitBtn.addEventListener('click', function () {
@@ -83,7 +84,31 @@ searchResults.addEventListener("click", function (event) {
         console.log(businessVicinity);
         console.log(businessRating);
         window.localStorage.setItem(businessName, JSON.stringify(businessVicinity, businessRating));
+
+        
     }
+    
+    function printFavorites() {
+        // either get scores from localstorage or set to empty array
+        var businessNameArray = JSON.parse(window.localStorage.getItem(businessVicinity, businessRating)) || [];
+      
+        // sort highscores by score property in descending order
+        businessNameArray.sort(function(businessVicinity, businessRating) {
+          return businessVicinity - businessRating;
+        });
+      
+        businessNameArray.forEach(function(businessName, businessVicinity, businessRating) {
+          // create li tag for each high score
+          var liTag = document.createElement("li");
+          liTag.textContent = businessName + " - " + businessVicinity +" - " + businessRating;
+      
+          // display on page
+          favoritesresults.textContent = businessName + " - " + businessVicinity +" - " + businessRating;
+          favoritesresults.appendChild(liTag);
+        });
+      }
+
+      printFavorites();
 
 
 });
