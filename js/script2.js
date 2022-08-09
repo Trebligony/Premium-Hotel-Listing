@@ -1,14 +1,14 @@
 var keyword = document.querySelector('#search-text');
 var submitBtn = document.querySelector('#submit');
 var googleMaps = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?&location=-33.8670522%2C151.1957362&radius=1500&type=restaurant';
-var searchResults = document.querySelector('.restaurants_list');
+var searchResults = document.querySelector('.list_title');
 var apiKey = "AIzaSyDieokqGrcuNBJXx4au9wQ6rKDCNEvGSyY";
 
 
 submitBtn.addEventListener('click', function () {
     var keyWord = keyword.value;
     var requestUrl = googleMaps + "&keyword=" + keyWord + "&key=" + apiKey;
-    var searchResultsEl = document.querySelector('.restaurants_list');
+    var searchResultsEl = document.querySelector('.list_title');
  
     fetch(requestUrl)    
     .then(function (response) {        
