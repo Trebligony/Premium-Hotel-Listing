@@ -16,29 +16,31 @@ submitBtn.addEventListener('click', function () {
     }).then(function (data) {
         var data = data.results;           
             
-        for (var i = 0; i < data.length; i++) {            
-            var businessName = data[i].name;  
-            var businessRating = data[i].rating;            
+        for (var i = 0; i < data.length; i++) {
+            var businessName = data[i].name;
+            var businessRating = data[i].rating;
             var businessVicinity = data[i].vicinity;
             var businessDetails = "Vicinity: " + businessVicinity + " -- " + "Rating: " + businessRating;
-            
             var resultsListRowEL = document.createElement('li')
             var businessNameEl = document.createElement('h3');
             var businessDetailsEl = document.createElement('p');
             var starSpanEl = document.createElement('span');
-            
             businessNameEl.textContent = businessName;
             businessDetailsEl.textContent = businessDetails;
             starSpanEl.classList.add("fa");
             starSpanEl.classList.add("fa-star");
-
+            starSpanEl.setAttribute("button-number", [i]);
+            starSpanEl.setAttribute("business", businessName);
+            starSpanEl.setAttribute("vicinity", businessVicinity);
+            starSpanEl.setAttribute("rating", businessRating);
             searchResultsEl.append(resultsListRowEL);
             resultsListRowEL.append(businessNameEl);
             resultsListRowEL.append(businessDetailsEl);
             resultsListRowEL.append(starSpanEl);
-          }        
+        }
     });
 })
+    
 
 displayEvents() || [];        // Diplays what was saved in storage 
 
@@ -71,16 +73,20 @@ let plannerInput = $("businessDetailsE1")
 
 // Message is stored when clicked storage button 
 
-$(".saveBtn").click(function() {
-    event.preventDefault();
+searchResults.addEventListener("click", function (event) {
+    var element = event.target;
+    if (element.matches("span") === true) {
+        var businessName = element.getAttribute("business");
+        var businessVicinity = element.getAttribute("vicinity");
+        var businessRating = element.getAttribute("rating");
+        console.log(businessName);
+        console.log(businessVicinity);
+        console.log(businessRating);
+        localStorage.setItem(businessName, JSON.stringify(businessVicinity, businessRating));
+    }
 
-    var businessName = $(this).attr("BusinessNameEl")
-    var businessDetailsEl = $(this).val();
 
-    localStorage.setItem(businessName), JSON.stringify(businessDetailsEl);
 });
-
-
 // events are posted by the hour time 
 
 const keys = Object.keys(localStorage);
