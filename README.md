@@ -47,5 +47,6 @@ All images necessary for website and readme preview stored here.
   
 ## Link
 * <a href="https://trebligony.github.io/Premium-Restaurants-Listing/">Premium Restaurants Listing</a>
+* <a href="https://github.com/Trebligony/Premium-Restaurants-Listing.git">GitHub Repository</a>
 *  Allow CORS, the url will be deployed.
 
