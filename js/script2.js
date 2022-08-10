@@ -112,7 +112,6 @@ searchResults.addEventListener("click", function (event) {
 
 
 });
-// events are posted by the hour time 
 
 const keys = Object.keys(localStorage);
 keys.forEach(businessName);
