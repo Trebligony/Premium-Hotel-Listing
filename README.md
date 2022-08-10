@@ -43,7 +43,7 @@ All images necessary for website and readme preview stored here.
 <img src="./images/home_screenshot.png" alt="home_image">
   * Search Results Screenshot
 <img src="./images/searchresults_screenshot.png" alt="search_image">
-* google.html - sample html from Google's Neighborhood discovery and is used for reference only.
+  * google.html - sample html from Google's Neighborhood discovery and is used for reference only.
   
 ## Link
 * <a href="https://trebligony.github.io/Premium-Restaurants-Listing/">Premium Restaurants Listing</a>
