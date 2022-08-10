@@ -46,5 +46,6 @@ All images necessary for website and readme preview stored here.
 * google.html - sample html from Google's Neighborhood discovery and is used for reference only.
   
 ## Link
-Due to sensitive use of Google API Key, upon users confirmation of Allow CORS, the url will be deployed.
+* <a href="https://trebligony.github.io/Premium-Restaurants-Listing/">Premium Restaurants Listing</a>
+*  Allow CORS, the url will be deployed.
 
