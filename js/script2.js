@@ -2,8 +2,8 @@ var keyword = document.querySelector('#search-text');
 var submitBtn = document.querySelector('#submit');
 var googleMaps = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?&location=-33.8670522%2C151.1957362&radius=1500&type=restaurant';
 var searchResults = document.querySelector('.list_title');
-var apiKey = "AIzaSyDieokqGrcuNBJXx4au9wQ6rKDCNEvGSyY";
-var favoritesresults = document.querySelector("#business-name");
+var favoriteResults = document.querySelector("#business-name");
+var businessInfoArray = JSON.parse(localStorage.getItem("businesses") || "[]");
 
 
 submitBtn.addEventListener('click', function () {
@@ -22,18 +22,21 @@ submitBtn.addEventListener('click', function () {
             var businessRating = data[i].rating;
             var businessVicinity = data[i].vicinity;
             var businessDetails = "Vicinity: " + businessVicinity + " -- " + "Rating: " + businessRating;
+
             var resultsListRowEL = document.createElement('li')
             var businessNameEl = document.createElement('h3');
             var businessDetailsEl = document.createElement('p');
             var starSpanEl = document.createElement('span');
             businessNameEl.textContent = businessName;
             businessDetailsEl.textContent = businessDetails;
+
             starSpanEl.classList.add("fa");
             starSpanEl.classList.add("fa-star");
             starSpanEl.setAttribute("button-number", [i]);
             starSpanEl.setAttribute("business", businessName);
             starSpanEl.setAttribute("vicinity", businessVicinity);
             starSpanEl.setAttribute("rating", businessRating);
+
             searchResultsEl.append(resultsListRowEL);
             resultsListRowEL.append(businessNameEl);
             resultsListRowEL.append(businessDetailsEl);
@@ -43,7 +46,8 @@ submitBtn.addEventListener('click', function () {
 })
     
 
-displayEvents() || [];        // Diplays what was saved in storage 
+// Diplays what was saved in storage 
+// displayEvents() || [];  
 
 // Shows the current date 
 
@@ -52,7 +56,7 @@ displayEvents() || [];        // Diplays what was saved in storage
 // Color Changes depending on the hour of the day 
 
 //const currentHour = moment().hour();
-let plannerInput = $("businessDetailsE1")
+// let plannerInput = $("businessDetailsE1")
 
 // $(plannerInput).each(function() {
        
@@ -76,57 +80,49 @@ let plannerInput = $("businessDetailsE1")
 
 searchResults.addEventListener("click", function (event) {
     var element = event.target;
+    
     if (element.matches("span") === true) {
         var businessName = element.getAttribute("business");
         var businessVicinity = element.getAttribute("vicinity");
         var businessRating = element.getAttribute("rating");
-        console.log(businessName);
-        console.log(businessVicinity);
-        console.log(businessRating);
-        window.localStorage.setItem(businessName, JSON.stringify(businessVicinity, businessRating));
-
-        
+        businessInfoArray.push({ Business_Name: businessName, Business_Rating: businessRating, Business_Vicinity: businessVicinity });
+        localStorage.setItem("businesses", JSON.stringify(businessInfoArray));       
     }
-    
-    function printFavorites() {
-        // either get scores from localstorage or set to empty array
-        var businessNameArray = JSON.parse(window.localStorage.getItem(businessVicinity, businessRating)) || [];
-      
-        // sort highscores by score property in descending order
-        businessNameArray.sort(function(businessVicinity, businessRating) {
-          return businessVicinity - businessRating;
-        });
-      
-        businessNameArray.forEach(function(businessName, businessVicinity, businessRating) {
-          // create li tag for each high score
-          var liTag = document.createElement("li");
-          liTag.textContent = businessName + " - " + businessVicinity +" - " + businessRating;
-      
-          // display on page
-          favoritesresults.textContent = businessName + " - " + businessVicinity +" - " + businessRating;
-          favoritesresults.appendChild(liTag);
-        });
-      }
-
-      printFavorites();
-
-
 });
 
-const keys = Object.keys(localStorage);
-keys.forEach(businessName);
+function printFavorites() {
+                  
+    businessInfoArray.forEach(function(index) {
+        var createElLi = document.createElement('li');
+        var createElP = document.createElement('p');
+        var createElP2 = document.createElement('p');
 
-function displayEvents(item) {
-    $(`*[data-hour="${item}"]`).val(JSON.parse(localStorage.getItem(`${item}`)));
-};
+        createElLi.textContent = index.Business_Name;
+        createElP.textContent = "Location: " + index.Business_Vicinity;
+        createElP2.textContent = "Rating: " + index.Business_Rating;
+        
+        favoriteResults.appendChild(createElLi);
+        createElLi.appendChild(createElP);
+        createElLi.appendChild(createElP2);
+    })
+  }
+
+  printFavorites();
+
+// const keys = Object.keys(localStorage);
+// keys.forEach(businessName);
+
+// function displayEvents(item) {
+//     $(`*[data-hour="${item}"]`).val(JSON.parse(localStorage.getItem(`${item}`)));
+// };
 
 
 // button to clear calendar 
 
-$("#clearSchedule").click(function() {
-    localStorage.clear();
-    window.location.assign("./index.html");
-});
+// $("#clearSchedule").click(function() {
+//     localStorage.clear();
+//     window.location.assign("./index.html");
+// });
 
 // var rootEl = $('.list_title')
 // //var timeEl = $('#currentDay');

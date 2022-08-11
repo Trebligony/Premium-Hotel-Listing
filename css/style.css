@@ -26,6 +26,7 @@ Version: 1.0.0
 3.Listing
 4.Listing Detail
 */
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0px !important;
@@ -745,16 +746,16 @@ table thead td {
 	Popular
 ----------------------*/
 .section-padding {
-	padding: 60px 0;
+	padding-top: 10px;
 }
 
 .section_heading {
 	text-align: center;
-	margin: 0 auto 60px;
+	/* margin-bottom: 0 auto 60px; */
 }
 
 .section_heading h2 {
-	margin: 0 auto 10px;
+	margin: 30 auto 30px;
 }
 
 .section_heading p {
@@ -827,6 +828,10 @@ table thead td {
 -------------------------*/
 #footer {
 	background: url(../images/dark-pattern.jpg);
+	/* position: fixed; */
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 .footer_bottom {
@@ -2349,4 +2354,17 @@ img {
 
 #simplelogo {
 	height: 75px;
+}
+
+.list_title li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid black;
+	padding: 2%;
+}
+
+.list_title p {
+	margin: 0;
 }
